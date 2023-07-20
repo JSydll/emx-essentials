@@ -56,9 +56,11 @@ _How application logic is executed._
 _How access to and ownership of data and execution logic is handled._
 </summary>
 
-* FBAC/RBAC
+* Access Control Lists (ACL)
 * Passwords & keys
 * Real & effective IDs
+* Users (`id`, `whoami`, `sudo`, `su`)
+* Ownership (`chown`, `chmod`)
 </details>
 
 <details><summary><b>System Startup & Shutdown</b></br>
@@ -66,7 +68,9 @@ _How access to and ownership of data and execution logic is handled._
 _How the system enters & quits operation._
 </summary>
 
-ROM -> Bootloader -> Kernel (+ Initramfs) -> init (systemd) -> userspace
+From 1st stage to 2nd stage bootloader,
+kernel (+ initramfs) and finally the
+system manager (systemd) and userspace.
 </details>
 
 ### 1.2 Filesystem
@@ -86,9 +90,10 @@ _How to choose and work with the filesystems on disc._
 </summary>
 
 * types (`ext4`, `squashfs`, `ubifs`)
-* utilities)
+* utilities
   * `mkfs`
   * `fsck`
+* mounting (`mount`, `umount`)
 </details>
 
 <details><summary><b>Special Filesystems</b></br>
@@ -122,24 +127,24 @@ _How to add filesystems to the rootfs_
 * utilities (`parted`)
 </details>
 
-### 1.4 Process Management
+### 1.4 I/O
 
-<details><summary><b>System utilities</b></br>
+<details><summary><b>Event Handling</b></br>
 
-_How to use the built-in process related tools._
+_How to detect and react on (file) events._
 </summary>
 
-* `ps`, `top`, `fuser`
-* `kill`
+* `ppoll`, `select`
 </details>
 
-<details><summary><b>Runtime analysis</b></br>
+<details><summary><b>Interprocess Communication (IPC)</b></br>
 
-_How to analyse the system in case of unexpected behavior._
+_How to use built-in features to communicate between processes._
 </summary>
 
-* `coredump`
-* `kdump`
+* sockets
+* pipes
+* shared memory API (`shm_open`, `mmap`, ...)
 </details>
 
 ### 1.5 System Management
@@ -164,6 +169,16 @@ _How to monitor applications on the system._
 * Software watchdog (`systemd_notify`)
 </details>
 
+### 1.6 External Devices
+
+<details><summary><b>Device Rules</b></br>
+
+_How to integrate external devices._
+</summary>
+
+* `udev`
+</details>
+
 ---
 
 ## 2 Embedded Specifics
@@ -177,7 +192,12 @@ _How to interact with and/or extend the behavior of the bootloader._
 </summary>
 
 * `uboot`
+  * Repository structure
+  * Configuring / patching uboot
+  * uboot environments
+  * `fw_*env` tools
 * `grub`
+  * grub.env
 * (`efi`)
 </details>
 
@@ -232,13 +252,13 @@ Knowledge helpful when working with Linux-based systems.
 
 ### 3.1 Utilities
 
-<details><summary><b>Commandline Tools</b></br>
+<details><summary><b>File operations</b></br>
 
 _How to use the built-in tools._
 </summary>
 
-* ls, cat, head, tail, less, echo
-* grep, awk
+* `ls`, `cat`, `head`, `tail`, `less`, `echo`
+* `grep`, `awk`
 </details>
 
 <details><summary><b>Editors</b></br>
@@ -246,8 +266,8 @@ _How to use the built-in tools._
 _How to view and edit files on the device._
 </summary>
 
-* vi / vim
-* nano
+* `vi` / `vim`
+* `nano`
 </details>
 
 <details><summary><b>Scripting</b></br>
@@ -257,6 +277,43 @@ _How to implement complex logic using the native command line._
 
 * sh / bash
 * zsh, hsh, ...
+</details>
+
+<details><summary><b>Process Management</b></br>
+
+_How to use the built-in process related tools._
+</summary>
+
+* `fuser`
+* `kill`
+</details>
+
+<details><summary><b>Logging</b></br>
+
+_How to leverage built-in logging features._
+</summary>
+
+* `dmesg`
+* syslog (`logger`)
+* `journald` 
+</details>
+
+<details><summary><b>System Inspection</b></br>
+
+_How to gather information about the operating system and applications._
+</summary>
+
+* Disk usage (`df`, `du`)
+* Runtime stats (`ps`, `top`)
+</details>
+
+<details><summary><b>Debugging</b></br>
+
+_How to analyse the system in case of unexpected behavior._
+</summary>
+
+* `coredump`
+* `kdump`
 </details>
 
 ---
