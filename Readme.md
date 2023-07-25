@@ -145,6 +145,8 @@ _How to use built-in features to communicate between processes._
 * sockets
 * pipes
 * shared memory API (`shm_open`, `mmap`, ...)
+* message queues
+* signals
 </details>
 
 ### 1.5 System Management
@@ -177,6 +179,18 @@ _How to integrate external devices._
 </summary>
 
 * `udev`
+</details>
+
+### 1.7 Networking
+
+<details><summary><b>Networking & Protocols</b></br>
+
+_How to interconnect multiple devices in a network._
+</summary>
+
+* ISO/OSI protocol layers and common protocols (IPv4, IPv6, TCP, UDP, IEEE 802.11)
+* Configuring network interfaces in Linux (netctl, NetworkManager, ConnMan, iwd, wpa_supplicant, systemd-networkd, ...)
+* Troubleshooting (`ping`, `traceroute`, `ssh`, `netstat`, `nmap`, `dig`, Wireshark)
 </details>
 
 ---
@@ -243,6 +257,18 @@ _How to implement security features with existing libraries._
 * `openssl`
 * `libsodium`
 * `wolfssl`
+* Mbed TLS
+</details>
+
+<details><summary><b>Binaries</b></br>
+
+_How binaries are assembled in Linux._
+</summary>
+
+* static & dynamic linking
+* `RPATH`, `LD_PRELOAD` and other environment variables
+* cross-compilation, canadian cross concept
+* troubleshooting (`ldd`, `readelf`, `objdump`, `file`)
 </details>
 
 ---
@@ -342,8 +368,9 @@ _How the distribution build system works and when to choose it._
 _How to manage static application versioning and dependencies on the device._
 </summary>
 
-* `dpkg`
-* `ipkg`
+* `dpkg` / `apt`
+* `ipkg` / `opkg`
+* `dnf` / `rpm`
 </details>
 
 ### 4.3 Update Frameworks
