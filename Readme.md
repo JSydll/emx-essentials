@@ -51,16 +51,6 @@ _How application logic is executed._
 </summary>
 </details>
 
-<details><summary><b>Networking & Protocols</b></br>
-
-_How to interconnect multiple devices in a network._
-</summary>
-
-* ISO/OSI protocol layers and common protocols (IPv4, IPv6, TCP, UDP, IEEE 802.11)
-* Configuring network interfaces in Linux (netctl, NetworkManager, ConnMan, iwd, wpa_supplicant, systemd-networkd, ...)
-* Troubleshooting (`ping`, `traceroute`, `ssh`, `netstat`, `nmap`, `dig`, Wireshark)
-</details>
-
 <details><summary><b>User & Access Management</b></br>
 
 _How access to and ownership of data and execution logic is handled._
@@ -189,6 +179,18 @@ _How to integrate external devices._
 </summary>
 
 * `udev`
+</details>
+
+### 1.7 Networking
+
+<details><summary><b>Networking & Protocols</b></br>
+
+_How to interconnect multiple devices in a network._
+</summary>
+
+* ISO/OSI protocol layers and common protocols (IPv4, IPv6, TCP, UDP, IEEE 802.11)
+* Configuring network interfaces in Linux (netctl, NetworkManager, ConnMan, iwd, wpa_supplicant, systemd-networkd, ...)
+* Troubleshooting (`ping`, `traceroute`, `ssh`, `netstat`, `nmap`, `dig`, Wireshark)
 </details>
 
 ---
