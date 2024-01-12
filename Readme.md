@@ -12,6 +12,34 @@ sections can be expanded with a click.
 Beyond this point, there is only a rough guidance on what level of detail could be expected in relation to a
 professional's experience grade, represented by the level of indentation.
 
+**Contents**
+
+* [Linux Fundamentals](#1-linux-fundamentals)
+  - [Principles & Concepts](#11-principles--concepts)
+  - [Filesystem](#12-filesystem)
+  - [Partitioning](#13-partitioning)
+  - [Processing & Communication](#14-processing--communication)
+  - [System Management](#15-system-management)
+  - [External Devices](#16-external-devices)
+  - [Networking](#17-networking)
+
+* [Embedded Specifics](#2-embedded-specifics)
+  - [Board Support](#21-board-support)
+  - [Libraries & Tools](#22-libraries--tools)
+
+* [Working with Linux](#3-working-with-linux)
+
+* [Building Blocks](#4-building-blocks)
+  - [Build Systems](#41-build-systems)
+  - [Application Management](#42-application-management)
+  - [Update Frameworks](#43-update-frameworks)
+  - [Robustness](#44-robustness)
+  - [Security](#45-security)
+
+Some helpful learning resources are attached to the individual topics in the respective details section.
+
+---
+
 
 ## 1 Linux Fundamentals
 General concepts & properties of any Linux based system (including desktop or server distributions).
@@ -127,7 +155,7 @@ _How to add filesystems to the rootfs_
 * utilities (`parted`)
 </details>
 
-### 1.4 I/O
+### 1.4 Processing & Communication
 
 <details><summary><b>Event Handling</b></br>
 
@@ -159,7 +187,7 @@ _How to manage dependencies, resources and the lifetime of applications on the s
 * `systemd`
   * units
   * overrides
-  * utilities (`systemctl`, `journalctl`, `systemd-run`, ...)
+  * utilities (`systemctl`, `journalctl`, `systemd-run`, `systemd-analyze`, ...)
 * `cgroups`
 </details>
 
@@ -220,12 +248,18 @@ _How to interact with and/or extend the behavior of the bootloader._
 
 _How to enable hardware features in the operating system._
 </summary>
+
+_Resources_:
+- [Introduction to Device Trees [Toradex] (Youtube)](https://www.youtube.com/watch?v=Nz6aBffv-Ek)
 </details>
 
 <details><summary><b>Drivers</b></br>
 
 _How to use (or implement) drivers for extended system features._
 </summary>
+
+_Resources_:
+- [Understanding the Structure of a Linux Kernel Device Driver [Toradex] (Youtube)](https://www.youtube.com/watch?v=pIUTaMKq0Xc)
 </details>
 
 <details><summary><b>Peripherals</b></br>
@@ -276,8 +310,6 @@ _How binaries are assembled in Linux._
 ## 3 Working with Linux
 Knowledge helpful when working with Linux-based systems.
 
-### 3.1 Utilities
-
 <details><summary><b>File operations</b></br>
 
 _How to use the built-in tools._
@@ -310,7 +342,7 @@ _How to implement complex logic using the native command line._
 _How to use the built-in process related tools._
 </summary>
 
-* `fuser`
+* `fuser`, `lsof`
 * `kill`
 </details>
 
@@ -322,6 +354,15 @@ _How to leverage built-in logging features._
 * `dmesg`
 * syslog (`logger`)
 * `journald` 
+</details>
+
+<details><summary><b>Application Analytics<b></br>
+
+_How to get performance metrics, profiles and call graphs for applications._
+</summary>
+
+* `perf`, `gprof`, [`hotspot`](https://github.com/KDAB/hotspot)
+* `valgrind`, `kcachegrind`, ...
 </details>
 
 <details><summary><b>System Inspection</b></br>
@@ -344,7 +385,7 @@ _How to analyse the system in case of unexpected behavior._
 
 ---
 
-## 4 Use Case Building Blocks
+## 4 Building Blocks
 Partial solutions or technical approaches for use cases commonly seen in embedded Linux products.
 
 ### 4.1 Build Systems
@@ -393,7 +434,7 @@ _How to reduce update transmission bandwidth._
 * `OSTree`
 </details>
 
-### 4.4 System Hardening
+### 4.4 Robustness
 
 <details><summary><b>Read-only Rootfs</b></br>
 
