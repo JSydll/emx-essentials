@@ -226,6 +226,9 @@ _How to interconnect multiple devices in a network._
 ## 2 Embedded Specifics
 Topics mostly relating to embedded devices and their specific product use case.
 
+_General resources_:
+- [Bootlin Embedded Linux course (info & material)](https://bootlin.com/training/embedded-linux/)
+
 ### 2.1 Board Support
 
 <details><summary><b>Bootloader</b></br>
@@ -303,6 +306,23 @@ _How binaries are assembled in Linux._
 * `RPATH`, `LD_PRELOAD` and other environment variables
 * cross-compilation, canadian cross concept
 * troubleshooting (`ldd`, `readelf`, `objdump`, `file`)
+</details>
+
+<details><summary><b>Flashing tools</b></br>
+
+_How to deploy software on the actual hardware._
+</summary>
+
+* [uuu / mfgtools (by NXP)](https://github.com/nxp-imx/mfgtools)
+* [snagboot / snagflash (by Bootlin)](https://github.com/bootlin/snagboot)
+</details>
+
+<details><summary><b>System testing</b></br>
+
+_What frameworks to use when testing with hardware-in-the-loop._
+</summary>
+
+* [labgrid (by Pengutronix)](https://github.com/labgrid-project/labgrid)
 </details>
 
 ---
