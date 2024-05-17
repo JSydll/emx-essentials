@@ -45,6 +45,9 @@ Some helpful learning resources are attached to the individual topics in the res
 General concepts & properties of any Linux based system (including desktop or server distributions).
 A solid foundation here allows to _reuse as many OS mechanisms as possible_ and to _avoid building conceptually broken software_.
 
+_Resources_:
+- [M. Kerrisk - The Linux Programming Interface](https://man7.org/tlpi/)
+
 ### 1.1 Principles & Concepts
 
 <details><summary><b>The Linux Kernel</b></br>
@@ -52,6 +55,7 @@ A solid foundation here allows to _reuse as many OS mechanisms as possible_ and 
 _How the kernel operates and interacts with the applications on the system._
 </summary>
 
+_Subtopics_:
 * scheduling
 * signals
 </details>
@@ -61,6 +65,7 @@ _How the kernel operates and interacts with the applications on the system._
 _How the two separate runtime contexts differ and interact._
 </summary>
 
+_Subtopics_:
 * system calls
 </details>
 
@@ -69,6 +74,7 @@ _How the two separate runtime contexts differ and interact._
 _How the system's entities are represented to the user._
 </summary>
 
+_Subtopics_:
 * file descriptors
 * symlinks, hardlinks
 </details>
@@ -84,6 +90,7 @@ _How application logic is executed._
 _How access to and ownership of data and execution logic is handled._
 </summary>
 
+_Subtopics_:
 * Access Control Lists (ACL)
 * Passwords & keys
 * Real & effective IDs
@@ -108,6 +115,7 @@ system manager (systemd) and userspace.
 _How the filesystem is structured, visible and protected against manipulation._
  </summary>
 
+_Subtopics_:
 * rootfs
 * `chroot`
 </details>
@@ -117,6 +125,7 @@ _How the filesystem is structured, visible and protected against manipulation._
 _How to choose and work with the filesystems on disc._
 </summary>
 
+_Subtopics_:
 * types (`ext4`, `squashfs`, `ubifs`)
 * utilities
   * `mkfs`
@@ -129,6 +138,7 @@ _How to choose and work with the filesystems on disc._
 _How to use the filesystems exposing kernel features or virtually extending the system._
 </summary>
 
+_Subtopics_:
 * `procfs`
 * `sysfs`
 * `tmpfs`
@@ -142,15 +152,17 @@ _How to use the filesystems exposing kernel features or virtually extending the 
 _How to define and interpret the system's partition table._
 </summary>
 
+_Subtopics_:
 * formats (`msdos`, `gpt`)
 * utilities (`parted`)
 </details>
 
 <details><summary><b>Mounting</b></br>
 
-_How to add filesystems to the rootfs_
-.</summary>
+_How to add filesystems to the rootfs_.
+</summary>
 
+_Subtopics_:
 * formats (`msdos`, `gpt`)
 * utilities (`parted`)
 </details>
@@ -162,6 +174,7 @@ _How to add filesystems to the rootfs_
 _How to detect and react on (file) events._
 </summary>
 
+_Subtopics_:
 * `ppoll`, `select`
 </details>
 
@@ -170,6 +183,7 @@ _How to detect and react on (file) events._
 _How to use built-in features to communicate between processes._
 </summary>
 
+_Subtopics_:
 * sockets
 * pipes
 * shared memory API (`shm_open`, `mmap`, ...)
@@ -184,6 +198,7 @@ _How to use built-in features to communicate between processes._
 _How to manage dependencies, resources and the lifetime of applications on the system._
 </summary>
 
+_Subtopics_:
 * `systemd`
   * units
   * overrides
@@ -196,6 +211,7 @@ _How to manage dependencies, resources and the lifetime of applications on the s
 _How to monitor applications on the system._
 </summary>
 
+_Subtopics_:
 * Software watchdog (`systemd_notify`)
 </details>
 
@@ -206,6 +222,7 @@ _How to monitor applications on the system._
 _How to integrate external devices._
 </summary>
 
+_Subtopics_:
 * `udev`
 </details>
 
@@ -216,6 +233,7 @@ _How to integrate external devices._
 _How to interconnect multiple devices in a network._
 </summary>
 
+_Subtopics_:
 * ISO/OSI protocol layers and common protocols (IPv4, IPv6, TCP, UDP, IEEE 802.11)
 * Configuring network interfaces in Linux (netctl, NetworkManager, ConnMan, iwd, wpa_supplicant, systemd-networkd, ...)
 * Troubleshooting (`ping`, `traceroute`, `ssh`, `netstat`, `nmap`, `dig`, Wireshark)
@@ -236,11 +254,13 @@ _General resources_:
 _How to interact with and/or extend the behavior of the bootloader._
 </summary>
 
-* `uboot`
+_Subtopics_:
+* `U-Boot`
   * Repository structure
-  * Configuring / patching uboot
-  * uboot environments
+  * Configuring / patching u-boot
+  * u-boot environments
   * `fw_*env` tools
+* `barebox`
 * `grub`
   * grub.env
 * (`efi`)
@@ -270,6 +290,7 @@ _Resources_:
 _How to interact with peripherals on the hardware board._
 </summary>
 
+_Subtopics_:
 * HSM / TPM
 * Flash memory
   * eMMC
@@ -283,6 +304,7 @@ _How to interact with peripherals on the hardware board._
 _How to use the reduced feature set of embedded-specific tools._
 </summary>
 
+_Subtopics_:
 * `busybox`
 </details>
 
@@ -291,6 +313,7 @@ _How to use the reduced feature set of embedded-specific tools._
 _How to implement security features with existing libraries._
 </summary>
 
+_Subtopics_:
 * `openssl`
 * `libsodium`
 * `wolfssl`
@@ -302,6 +325,7 @@ _How to implement security features with existing libraries._
 _How binaries are assembled in Linux._
 </summary>
 
+_Subtopics_:
 * static & dynamic linking
 * `RPATH`, `LD_PRELOAD` and other environment variables
 * cross-compilation, canadian cross concept
@@ -335,6 +359,7 @@ Knowledge helpful when working with Linux-based systems.
 _How to use the built-in tools._
 </summary>
 
+_Subtopics_:
 * `ls`, `cat`, `head`, `tail`, `less`, `echo`
 * `grep`, `awk`
 </details>
@@ -344,6 +369,7 @@ _How to use the built-in tools._
 _How to view and edit files on the device._
 </summary>
 
+_Subtopics_:
 * `vi` / `vim`
 * `nano`
 </details>
@@ -353,8 +379,10 @@ _How to view and edit files on the device._
 _How to implement complex logic using the native command line._
 </summary>
 
+_Subtopics_:
 * sh / bash
 * zsh, hsh, ...
+* interoperability (e.g. avoiding bashisms)
 </details>
 
 <details><summary><b>Process Management</b></br>
@@ -362,6 +390,7 @@ _How to implement complex logic using the native command line._
 _How to use the built-in process related tools._
 </summary>
 
+_Subtopics_:
 * `fuser`, `lsof`
 * `kill`
 </details>
@@ -371,6 +400,7 @@ _How to use the built-in process related tools._
 _How to leverage built-in logging features._
 </summary>
 
+_Subtopics_:
 * `dmesg`
 * syslog (`logger`)
 * `journald` 
@@ -381,6 +411,7 @@ _How to leverage built-in logging features._
 _How to get performance metrics, profiles and call graphs for applications._
 </summary>
 
+_Subtopics_:
 * `perf`, `gprof`, [`hotspot`](https://github.com/KDAB/hotspot)
 * `valgrind`, `kcachegrind`, ...
 </details>
@@ -390,6 +421,7 @@ _How to get performance metrics, profiles and call graphs for applications._
 _How to gather information about the operating system and applications._
 </summary>
 
+_Subtopics_:
 * Disk usage (`df`, `du`)
 * Runtime stats (`ps`, `top`)
 </details>
@@ -399,6 +431,7 @@ _How to gather information about the operating system and applications._
 _How to analyse the system in case of unexpected behavior._
 </summary>
 
+_Subtopics_:
 * `coredump`
 * `kdump`
 </details>
@@ -414,6 +447,11 @@ Partial solutions or technical approaches for use cases commonly seen in embedde
 
 _How the package-based image build system works and when to choose it._
 </summary>
+
+_Resources_:
+- [Official Yocto documentation](https://docs.yoctoproject.org/)
+- [Yocto crash course by Bootlin](https://bootlin.com/doc/training/yocto/yocto-slides.pdf)
+- [Mender.io's collection of Yocto tutorials](https://hub.mender.io/c/tutorials/yocto-project/19)
 </details>
 
 <details><summary><b>Buildroot</b></br>
@@ -429,6 +467,7 @@ _How the distribution build system works and when to choose it._
 _How to manage static application versioning and dependencies on the device._
 </summary>
 
+_Subtopics_:
 * `dpkg` / `apt`
 * `ipkg` / `opkg`
 * `dnf` / `rpm`
@@ -441,8 +480,14 @@ _How to manage static application versioning and dependencies on the device._
 _How to handle updates on the device._
 </summary>
 
+_Subtopics_:
 * `rauc`
 * `swupdate`
+
+_Resources_:
+- Introductions [here](https://www.pengutronix.de/de/blog/2019-08-16-rauc_maintenance.html), [here](https://mkrak.org/2018/01/10/updating-embedded-linux-devices-part1/) or [here](https://sbabic.github.io/swupdate/scenarios.html)
+- [RAUC documentation](https://www.rauc.io/)
+- [SWUpdate documentation](https://sbabic.github.io/swupdate/swupdate.html)
 </details>
 
 <details><summary><b>Incremental Update Support</b></br>
@@ -450,6 +495,7 @@ _How to handle updates on the device._
 _How to reduce update transmission bandwidth._
 </summary>
 
+_Subtopics_:
 * `casync`
 * `OSTree`
 </details>
@@ -461,8 +507,12 @@ _How to reduce update transmission bandwidth._
 _How to reduce the number of writes to the rootfs and protect it against undesired manipulation._
 </summary>
 
+_Subtopics_:
 * systemd requirements
 * pre-init & overlays
+
+_Resources_:
+- [Pre-init for /etc overlay (Yocto)](https://git.yoctoproject.org/poky/tree/meta/classes-recipe/overlayfs-etc.bbclass)
 </details>
 
 ### 4.5 Security
